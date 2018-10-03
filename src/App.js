@@ -20,7 +20,8 @@ class App extends Component {
 							<Row >
 								<Col xs={12} md={4} >
 									<div className="ingredients-container">
-										<h5>Ingredients</h5>
+										<h5 className="small-box-title">Ingredients</h5>
+										<hr />
 										<ul className="ingredients-list">
 											<li>1 whole chicken</li>
 											<li>2 cups chicken broth</li>
@@ -29,7 +30,8 @@ class App extends Component {
 										</ul>
 									</div>
 									<div className="available-ingredients-container">
-										<h5>In My Refrigerator</h5>
+										<h5 className="small-box-title">In My Refrigerator</h5>
+										<hr />
 										<ul className="available-ingredients-list">
 											<li>1 whole chicken</li>
 											<li>2 cups chicken broth</li>

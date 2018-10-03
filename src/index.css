@@ -61,12 +61,16 @@ h2.recipe-title {
 
 /* Ingredients Container */
 .ingredients-container {
-  border: 1px solid #bbb;
+  border: 1px solid #999;
   border-radius: 12px;
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 20px;
   background-color: #edbeaf;
+}
+
+h5.small-box-title {
+  /*margin-bottom: 12px;*/
 }
 
 /* Ingredients List */
@@ -78,9 +82,13 @@ ul.ingredients-list {
 
 }
 
+ul.ingredients-list li {
+  margin-bottom: 7px;
+}
+
 /* Ingredients Container */
 .available-ingredients-container {
-  border: 1px solid #bbb;
+  border: 1px solid #999;
   border-radius: 12px;
   padding: 10px;
   margin-bottom: 15px;
@@ -93,6 +101,10 @@ ul.available-ingredients-list {
   padding: 0 0 0 8px;
   margin-left: 15px;
   margin-bottom: 0;
+}
+
+ul.available-ingredients-list li {
+  margin-bottom: 7px;
 }
 
 
