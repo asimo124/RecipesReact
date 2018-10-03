@@ -1,5 +1,6 @@
 import { Component, PropTypes } from 'react';
 import React from 'react';
+import AvailableIngredientListItem from './available_ingredient_list_item';
 
 export default class AvailableIngredients extends Component {
 	render() {
@@ -7,10 +8,9 @@ export default class AvailableIngredients extends Component {
 			<h5 className="small-box-title">In My Refrigerator</h5>
 			<hr />
 			<ul className="available-ingredients-list">
-				<li>1 whole chicken</li>
-				<li>2 cups chicken broth</li>
-				<li>3 carrots, chopped</li>
-				<li>2 sqaush, chopped</li>
+				{this.props.use_available_ingredients.map( ingredient =>
+					<AvailableIngredientListItem get_available_ingredient={ingredient} />
+				)}
 			</ul>
 		</div>
 	}

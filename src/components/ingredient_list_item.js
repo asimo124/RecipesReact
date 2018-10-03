@@ -3,6 +3,6 @@ import React from 'react';
 
 export default class IngredientListItem extends Component {
 	render() {
-		return <li>1 whole chicken</li>
+		return <li>{this.props.get_ingredient.ingredient}</li>
 	}
 }

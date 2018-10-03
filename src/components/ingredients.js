@@ -8,7 +8,9 @@ export default class Ingredients extends Component {
 			<h5 className="small-box-title">Ingredients</h5>
 			<hr />
 			<ul className="ingredients-list">
-				<IngredientListItem />
+				{this.props.use_ingredients.map( ingredient =>
+					<IngredientListItem get_ingredient={ingredient} />
+				)}
 			</ul>
 		</div>
 	}

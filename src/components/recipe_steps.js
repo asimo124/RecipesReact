@@ -8,7 +8,9 @@ export default class RecipeSteps extends Component {
 			<h2 className="recipe-title">Chicken Noodle Soop</h2>
 			<hr/>
 			<ul className="recipe-steps-list">
-				<RecipeStepItem />
+				{this.props.use_steps.map( step =>
+					<RecipeStepItem get_step={step} />
+				)}
 			</ul>
 			<div className="medlarge_clear" ></div>
 			<img src="/images/chicken_noodle_soup.jpg" className="full-width-img" />
