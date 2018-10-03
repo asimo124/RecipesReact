@@ -8,7 +8,7 @@ class App extends Component {
 				<Grid>
 					<h1>Alex's Recipes</h1>
 					<Row >
-						<div className="recipe-list-container" xs={12} md={4}>
+						<div className="recipe-list-container" >
 							<ul className="recipe-list">
 								<li><a href="#">Chicken Noodle Soup</a></li>
 								<li><a href="#">Beef Fajitas</a></li>
@@ -16,7 +16,7 @@ class App extends Component {
 								<li><a href="#">Spaghetti Meatballs</a></li>
 							</ul>
 						</div>
-						<div className="recipe-details-container" xs={12} md={8}>
+						<div className="recipe-details-container" >
 							<Row >
 								<Col xs={12} md={4} >
 									<div className="ingredients-container">
