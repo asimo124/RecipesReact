@@ -13,6 +13,7 @@ class App extends Component {
 				"recipe_name": "Chicken Noodle Soup",
 				"ingredients": [
 					{
+						"id": "1",
 						"recipe_id": "1",
 						"ingredient_id": "1",
 						"quantity": "1",
@@ -20,6 +21,7 @@ class App extends Component {
 						"ingredient": "Chicken"
 					},
 					{
+						"id": "2",
 						"recipe_id": "1",
 						"ingredient_id": "2",
 						"quantity": "2",
@@ -27,6 +29,7 @@ class App extends Component {
 						"ingredient": "Chicken Broth"
 					},
 					{
+						"id": "3",
 						"recipe_id": "1",
 						"ingredient_id": "3",
 						"quantity": "2",
@@ -34,6 +37,7 @@ class App extends Component {
 						"ingredient": "Carrots"
 					},
 					{
+						"id": "4",
 						"recipe_id": "1",
 						"ingredient_id": "4",
 						"quantity": "2",
@@ -63,11 +67,13 @@ class App extends Component {
 				],
 				"available_ingredients": [
 					{
+						"id": "2",
 						"recipe_id": "1",
 						"ingredient_id": "2",
 						"ingredient": "Chicken Broth"
 					},
 					{
+						"id": "3",
 						"recipe_id": "1",
 						"ingredient_id": "3",
 						"ingredient": "Carrots"
@@ -79,6 +85,7 @@ class App extends Component {
 				"recipe_name": "Chili",
 				"ingredients": [
 					{
+						"id": "8",
 						"recipe_id": "3",
 						"ingredient_id": "5",
 						"quantity": "1",
@@ -86,6 +93,7 @@ class App extends Component {
 						"ingredient": "Ground Beef"
 					},
 					{
+						"id": "9",
 						"recipe_id": "3",
 						"ingredient_id": "8",
 						"quantity": "1",
@@ -93,6 +101,7 @@ class App extends Component {
 						"ingredient": "Onions"
 					},
 					{
+						"id": "10",
 						"recipe_id": "3",
 						"ingredient_id": "9",
 						"quantity": "1",
@@ -122,16 +131,19 @@ class App extends Component {
 				],
 				"available_ingredients": [
 					{
+						"id": "1",
 						"recipe_id": "3",
 						"ingredient_id": "5",
 						"ingredient": "Ground Beef"
 					},
 					{
+						"id": "5",
 						"recipe_id": "3",
 						"ingredient_id": "8",
 						"ingredient": "Onions"
 					},
 					{
+						"id": "6",
 						"recipe_id": "3",
 						"ingredient_id": "9",
 						"ingredient": "Pinto Beans"
@@ -143,6 +155,7 @@ class App extends Component {
 				"recipe_name": "Spaghetti with Meatballs",
 				"ingredients": [
 					{
+						"id": "5",
 						"recipe_id": "2",
 						"ingredient_id": "5",
 						"quantity": "1",
@@ -150,6 +163,7 @@ class App extends Component {
 						"ingredient": "Ground Beef"
 					},
 					{
+						"id": "6",
 						"recipe_id": "2",
 						"ingredient_id": "6",
 						"quantity": "1",
@@ -157,6 +171,7 @@ class App extends Component {
 						"ingredient": "Spaghetti Pasta"
 					},
 					{
+						"id": "7",
 						"recipe_id": "2",
 						"ingredient_id": "7",
 						"quantity": "1",
@@ -186,11 +201,13 @@ class App extends Component {
 				],
 				"available_ingredients": [
 					{
+						"id": "1",
 						"recipe_id": "2",
 						"ingredient_id": "5",
 						"ingredient": "Ground Beef"
 					},
 					{
+						"id": "4",
 						"recipe_id": "2",
 						"ingredient_id": "7",
 						"ingredient": "Tomato Sauce"
@@ -200,14 +217,28 @@ class App extends Component {
 		]
 	};
 
+	handleClickRecipeLink = (id) => {
+		this.setState({
+			first_recipe_id: id
+		});
+	};
+
 	render() {
 		return (
 			<div className="container">
 				<Grid>
 					<h1>Alex's Recipes</h1>
 					<Row >
-						<RecipeList recipes={this.state.recipes} />
-						<RecipeDetails recipe={this.state.recipes[this.state.first_recipe_id]}  />
+						<RecipeList
+							key={1000}
+							recipes={this.state.recipes}
+							clickRecipe={this.handleClickRecipeLink}/>
+						<RecipeDetails
+							key={2000}
+							recipe={this.state.recipes.map( recipe => {
+								return this.state.recipes[0];
+							})}
+							/>
 					</Row>
 				</Grid>
 			</div>

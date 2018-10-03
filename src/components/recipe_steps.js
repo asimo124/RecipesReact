@@ -9,7 +9,11 @@ export default class RecipeSteps extends Component {
 			<hr/>
 			<ul className="recipe-steps-list">
 				{this.props.use_steps.map( step =>
-					<RecipeStepItem get_step={step} />
+					<RecipeStepItem
+						key={step.id}
+						name={step.step}
+						displayOrder={step.display_order}
+					/>
 				)}
 			</ul>
 			<div className="medlarge_clear" ></div>

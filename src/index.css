@@ -32,17 +32,20 @@ ul.recipe-list li a {
   margin-left: 27px;
   /*font-weight: bold;*/
 }
-ul.recipe-list li a:active {
+ul.recipe-list li a:visited {
   color: #FFF;
+  cursor: pointer;
 }
 ul.recipe-list li a:visited {
   color: #FFF;
 }
 ul.recipe-list li a:link {
   color: #FFF;
+  cursor: pointer;
 }
-ul.recipe-list li a:hover {
+ul.recipe-list li a:visited {
   color: #FFF;
+  cursor: pointer;
 }
 /* Recipe Details Container */
 .recipe-details-container {

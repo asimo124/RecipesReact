@@ -9,7 +9,9 @@ export default class AvailableIngredients extends Component {
 			<hr />
 			<ul className="available-ingredients-list">
 				{this.props.use_available_ingredients.map( ingredient =>
-					<AvailableIngredientListItem get_available_ingredient={ingredient} />
+					<AvailableIngredientListItem
+						key={ingredient.id}
+						name={ingredient.ingredient} />
 				)}
 			</ul>
 		</div>

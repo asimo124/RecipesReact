@@ -9,7 +9,9 @@ export default class Ingredients extends Component {
 			<hr />
 			<ul className="ingredients-list">
 				{this.props.use_ingredients.map( ingredient =>
-					<IngredientListItem get_ingredient={ingredient} />
+					<IngredientListItem
+						key={ingredient.id}
+						name={ingredient.ingredient} />
 				)}
 			</ul>
 		</div>
