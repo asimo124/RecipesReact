@@ -49,6 +49,8 @@ class App extends Component {
 											<li><strong>Step 2:</strong> De-bone the chicken</li>
 											<li><strong>Step 3:</strong> Place chicken, broth, and vegetables in large boiling pot</li>
 										</ul>
+										<div className="medlarge_clear" ></div>
+										<img src="/images/chicken_noodle_soup.jpg" className="full-width-img" />
 									</div>
 								</Col>
 							</Row>
