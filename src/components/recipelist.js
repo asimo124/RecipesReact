@@ -10,7 +10,7 @@ export default class RecipeList extends Component {
 				{this.props.recipes.map( recipe =>
 					<RecipeListItem
 						name={recipe.recipe_name}
-						id={'recipe' + recipe.id}
+						id={recipe.id}
 						key={recipe.id}
 						doClickRecipe={this.props.clickRecipe}
 						/>

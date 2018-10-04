@@ -5,7 +5,7 @@ import RecipeStepItem from './recipe_step_item'
 export default class RecipeSteps extends Component {
 	render() {
 		return <div className="recipe-steps-container">
-			<h2 className="recipe-title">Chicken Noodle Soop</h2>
+			<h2 className="recipe-title">{this.props.recipe_name}</h2>
 			<hr/>
 			<ul className="recipe-steps-list">
 				{this.props.use_steps.map( step =>
@@ -17,7 +17,7 @@ export default class RecipeSteps extends Component {
 				)}
 			</ul>
 			<div className="medlarge_clear" ></div>
-			<img src="/images/chicken_noodle_soup.jpg" className="full-width-img" />
+			<img src={this.props.image_path} className="full-width-img" />
 		</div>
 	}
 }
