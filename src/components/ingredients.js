@@ -11,7 +11,10 @@ export default class Ingredients extends Component {
 				{this.props.use_ingredients.map( ingredient =>
 					<IngredientListItem
 						key={ingredient.id}
-						name={ingredient.ingredient} />
+						name={ingredient.ingredient}
+						quantity={ingredient.quantity}
+						unit_of_measure={ingredient.unit_of_measure}
+						/>
 				)}
 			</ul>
 		</div>
